@@ -1,38 +1,59 @@
-.App {
-  text-align: center;
+.main {
+    max-width: fit-content;
+    margin-inline: auto;
+    text-align: center;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column; /* Optional if you want vertical alignment */
+    justify-content: center; /* Responsible for vertical alignment when flex-direction is column */
+    position: relative;
+    top: -200px;
+    height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.form select {
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.formButtons {
+    display: flex;
+    width: 80%;
+    margin: 20px 0;
+    margin-inline: auto;
+    justify-content: space-evenly;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.courses {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    gap: 15px;
 }
 
-.App-link {
-  color: #61dafb;
+.courseInput {
+    margin: 10px 0;
+    display: flex;
+    align-self: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.courseInput input,
+button,
+select {
+    margin-left: 8px;
+}
+
+.form input[type="submit"] {
+    width: fit-content;
+    font-size: 1.4rem;
+}
+
+.main h1 {
+    text-align: left;
+}
+
+.response {
+    font-size: 0.5rem;
 }

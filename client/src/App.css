@@ -3,12 +3,44 @@
     margin-inline: auto;
     text-align: center;
     font-size: 2rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-rows: repeat(9, 100px);
+    grid-template-columns: repeat(4, 200px 150px);
+    column-gap: 10px;
+    row-gap: 10px;
+    margin-top: 10px;
+}
+
+.course,
+.total,
+.hour,
+.blank {
+    outline: 2px solid black;
+    font-size: 1.5rem;
+}
+
+.course,
+.total,
+.hour,
+.blank {
+    outline: 2px solid black;
     display: flex;
-    flex-direction: column; /* Optional if you want vertical alignment */
-    justify-content: center; /* Responsible for vertical alignment when flex-direction is column */
-    position: relative;
-    top: -200px;
-    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.semster {
+    grid-column: 1/-1;
+    text-align: left;
+    font-size: 1.2rem;
+}
+
+.total {
+    font-weight: bold;
 }
 
 .form select {

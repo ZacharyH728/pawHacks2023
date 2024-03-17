@@ -4,13 +4,21 @@ import './App.css';
 import { useState } from 'react';
 
 import { Form, DropdownForm, MyForm } from './components/form';
+import { Table1, Table2, Table3, Table4 } from './components/table';
+import { API } from './components/api';
+
+import { Route, Routes } from "react-router-dom"
+
+import { HomePage } from './components/homepage';
+import TablePage from './components/tablepage';
 
 function App() {
 
   return (
-    <div className='main'>
-      <DropdownForm label="Please select your current major" label2={"Please select your desired major"} />
-    </div>
+    <Routes>
+      <Route path='/' Component={HomePage} />
+      <Route path='/schedule' Component={TablePage} />
+    </Routes>
   );
 }
 

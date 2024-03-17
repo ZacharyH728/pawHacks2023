@@ -1,5 +1,7 @@
 
 import { useState, useEffect } from "react";
+import { useNavigate } from 'react-router-dom';
+
 
 
 export function Form() {
@@ -33,9 +35,12 @@ export function Form() {
 
 export function DropdownForm({ label, label2 }) {
 
-    const majors = ["Computer Science", "Computer Engineering", "Business"]
+    const majors = ["Computer Science", "Computer Engineering", "Business Administration", "Computer Science & Business Administration"]
 
     const [majorList, setMajorList] = useState(majors)
+
+    let navigate = useNavigate(); // you gain access to the history instance that you may use to navigate.
+
 
     useEffect(() => {
         //TODO add api
@@ -66,8 +71,9 @@ export function DropdownForm({ label, label2 }) {
     };
 
     const handleSubmit = (event) => {
-        event.preventDefault()
-        setSubmit(new Array(currentMajor, desiredtMajor, ...inputs))
+        navigate('/schedule')
+        // event.preventDefault()
+        // setSubmit(new Array(currentMajor, desiredtMajor, ...inputs))
     }
 
     const handleAddInput = () => {
